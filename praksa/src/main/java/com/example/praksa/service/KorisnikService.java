@@ -5,6 +5,8 @@ import com.example.praksa.repository.KorisnikRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class KorisnikService {
 
@@ -27,7 +29,10 @@ public class KorisnikService {
     }
 
     public Korisnik findOne(Long id){
-        return korisnikRepository.
+        return korisnikRepository.findAllById(id);
+    }
+    public List<Korisnik> findAll(){
+        return korisnikRepository.findAll();
     }
 
 }

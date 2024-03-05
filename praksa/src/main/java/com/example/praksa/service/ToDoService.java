@@ -35,6 +35,9 @@ public class ToDoService {
         if (updateToDo.getId() == null){
             throw new Exception("Ovaj zadatak ne postoji");
         }
+        updateToDo.setNaslov(toDo.getNaslov());
+        updateToDo.setOpis(toDo.getOpis());
+        updateToDo.setPriority(toDo.getPriority());
         updateToDo.setCompleted(toDo.getCompleted());
         return toDoRepository.save(updateToDo);
     }

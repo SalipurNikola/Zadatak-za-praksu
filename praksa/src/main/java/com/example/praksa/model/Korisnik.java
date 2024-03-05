@@ -14,7 +14,7 @@ public class Korisnik
     private Long id;
 
     @Column
-    private String korisnickoIme;
+    private String korisnickoime;
 
     @Column
     private String lozinka;
@@ -26,7 +26,7 @@ public class Korisnik
     private String prezime;
 
     @Column
-    private LocalDate datumRodjenja;
+    private LocalDate datumrodjenja;
 
     @OneToMany(mappedBy = "korisnik", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private Set<ToDo>toDoSet = new HashSet<>();
@@ -34,12 +34,12 @@ public class Korisnik
     public Korisnik() {
     }
 
-    public Korisnik(String korisnickoIme, String lozinka, String ime, String prezime, LocalDate datumRodjenja) {
-        this.korisnickoIme = korisnickoIme;
+    public Korisnik(String korisnickoime, String lozinka, String ime, String prezime, LocalDate datumrodjenja) {
+        this.korisnickoime = korisnickoime;
         this.lozinka = lozinka;
         this.ime = ime;
         this.prezime = prezime;
-        this.datumRodjenja = datumRodjenja;
+        this.datumrodjenja = datumrodjenja;
     }
 
     public Long getId() {
@@ -51,11 +51,11 @@ public class Korisnik
     }
 
     public String getKorisnickoIme() {
-        return korisnickoIme;
+        return korisnickoime;
     }
 
-    public void setKorisnickoIme(String korisnickoIme) {
-        this.korisnickoIme = korisnickoIme;
+    public void setKorisnickoIme(String korisnickoime) {
+        this.korisnickoime = korisnickoime;
     }
 
     public String getLozinka() {
@@ -83,11 +83,11 @@ public class Korisnik
     }
 
     public LocalDate getDatumRodjenja() {
-        return datumRodjenja;
+        return datumrodjenja;
     }
 
-    public void setDatumRodjenja(LocalDate datumRodjenja) {
-        this.datumRodjenja = datumRodjenja;
+    public void setDatumRodjenja(LocalDate datumrodjenja) {
+        this.datumrodjenja = datumrodjenja;
     }
 
     public Set<ToDo> getToDoSet() {

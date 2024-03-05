@@ -22,7 +22,7 @@ public class ToDoService {
         }
         return toDoRepository.save(toDo);
     }
-    public List<ToDo> findAll(){
+    public static List<ToDo> findAll(){
         return toDoRepository.findAll();
     }
 

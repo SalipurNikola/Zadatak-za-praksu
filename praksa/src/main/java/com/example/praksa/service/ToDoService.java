@@ -10,13 +10,13 @@ import java.util.List;
 
 @Service
 public class ToDoService {
-    private final ToDoRepository toDoRepository;
+    private static ToDoRepository toDoRepository;
 
     @Autowired
     public ToDoService(ToDoRepository toDoRepository){
         this.toDoRepository = toDoRepository;
     }
-    public ToDo create(ToDo toDo) throws Exception{
+    public static ToDo create(ToDo toDo) throws Exception{
         if(toDo.getId() != null){
             throw new Exception("Ovaj zadatak vec postoji");
         }
@@ -26,7 +26,7 @@ public class ToDoService {
         return toDoRepository.findAll();
     }
 
-    public List<ToDo> findAllByKorisnik(Korisnik korisnik){
+    public static List<ToDo> findAllByKorisnik(Korisnik korisnik){
         return toDoRepository.findAllByKorisnik(korisnik);
     }
 

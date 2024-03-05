@@ -7,4 +7,6 @@ public interface KorisnikRepository extends JpaRepository<Korisnik, Long> {
     Korisnik findAllByKorisnickoImeAndLozinka (String korisnickoIme, String lozinka);
 
     Korisnik findAllByKorisnickoIme (String korisnickoIme);
+
+    Korisnik findAllById (Long id);
 }

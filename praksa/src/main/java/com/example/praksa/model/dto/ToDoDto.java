@@ -5,10 +5,10 @@ import jakarta.persistence.Column;
 
 public class ToDoDto {
     private Long id;
-    private String naslov;
-    private String opis;
-    private Priority priority;
-    private Boolean completed;
+    private static String naslov;
+    private static String opis;
+    private static Priority priority;
+    private static Boolean completed;
 
     public ToDoDto() {
     }
@@ -36,7 +36,7 @@ public class ToDoDto {
         this.id = id;
     }
 
-    public String getNaslov() {
+    public static String getNaslov() {
         return naslov;
     }
 
@@ -44,7 +44,7 @@ public class ToDoDto {
         this.naslov = naslov;
     }
 
-    public String getOpis() {
+    public static String getOpis() {
         return opis;
     }
 
@@ -52,7 +52,7 @@ public class ToDoDto {
         this.opis = opis;
     }
 
-    public Priority getPriority() {
+    public static Priority getPriority() {
         return priority;
     }
 
@@ -60,7 +60,7 @@ public class ToDoDto {
         this.priority = priority;
     }
 
-    public Boolean getCompleted() {
+    public static Boolean getCompleted() {
         return completed;
     }
 

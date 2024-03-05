@@ -25,7 +25,7 @@ public class KorisnikService {
     }
 
     public Korisnik findByKorisnickoImeAndLozinka(String korisnickoIme, String lozinka){
-        return korisnikRepository.findAllByKorisnickoImeAndLozinka(korisnickoIme, lozinka);
+        return korisnikRepository.findAllByKorisnickoimeAndLozinka(korisnickoIme, lozinka);
     }
 
     public Korisnik findOne(Long id){

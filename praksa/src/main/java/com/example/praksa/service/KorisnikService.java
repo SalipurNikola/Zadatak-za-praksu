@@ -26,4 +26,8 @@ public class KorisnikService {
         return korisnikRepository.findAllByKorisnickoImeAndLozinka(korisnickoIme, lozinka);
     }
 
+    public Korisnik findOne(Long id){
+        return korisnikRepository.
+    }
+
 }

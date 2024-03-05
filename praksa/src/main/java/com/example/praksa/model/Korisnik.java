@@ -13,7 +13,7 @@ public class Korisnik
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(name = "kor_ime")
+    @Column
     private String korisnickoIme;
 
     @Column
@@ -28,7 +28,7 @@ public class Korisnik
     @Column
     private LocalDate datumRodjenja;
 
-    @OneToMany(mappedBy = "kor_ime", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "korisnik", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     private Set<ToDo>toDoSet = new HashSet<>();
 
     public Korisnik() {

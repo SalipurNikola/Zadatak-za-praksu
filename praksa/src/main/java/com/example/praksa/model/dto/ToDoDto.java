@@ -5,10 +5,10 @@ import jakarta.persistence.Column;
 
 public class ToDoDto {
     private Long id;
-    private static String naslov;
-    private static String opis;
-    private static Priority priority;
-    private static Boolean completed;
+    private  String naslov;
+    private  String opis;
+    private  Priority priority;
+    private  Boolean completed;
 
     public ToDoDto() {
     }

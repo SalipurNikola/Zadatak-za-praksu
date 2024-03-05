@@ -1,13 +1,14 @@
 package com.example.praksa.model;
 
-import jakarta.persistence.*;
 
+import javax.persistence.*;
 import java.time.LocalDate;
 import java.util.HashSet;
 import java.util.Set;
+import java.io.Serializable;
 
 @Entity
-public class Korisnik
+public class Korisnik implements Serializable
 {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -1,0 +1,2 @@
+insert into korisnik(korisnickoime,lozinka, ime, prezime, datumrodjenja) values ('Marko123', 'Marko123' ,'Marko', 'Markovic', '2000-05-03');
+insert into todo (naslov, opis, priority, completed, korisnik_id) values ('Vezbe za biceps', 'Potrebno je sa klijentom odraditi vezbe za biceps', 'HIGH', false, 1);

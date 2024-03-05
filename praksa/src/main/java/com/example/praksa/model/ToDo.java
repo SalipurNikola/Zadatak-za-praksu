@@ -35,6 +35,13 @@ public class ToDo {
         this.korisnik = korisnik;
     }
 
+    public ToDo(String naslov, String opis, Priority priority, Boolean completed) {
+        this.naslov = naslov;
+        this.opis = opis;
+        this.priority = priority;
+        this.completed = completed;
+    }
+
     public Long getId() {
         return id;
     }

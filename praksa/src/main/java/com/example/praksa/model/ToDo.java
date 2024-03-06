@@ -2,8 +2,10 @@ package com.example.praksa.model;
 
 import jakarta.persistence.*;
 
+import java.io.Serializable;
+
 @Entity
-public class ToDo {
+public class ToDo implements Serializable {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
